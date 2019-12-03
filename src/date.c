@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "date.h"
 
 /* Format and print a struct datetime. */
@@ -56,4 +57,9 @@ void datetime_from_astronomical_jdn(struct datetime *dt, double jdn)
     calculate_factors_and_clock(jdn, &d4c, &d4k, &days, &clock);
     convert_jdn_to_ymd(days, d4c, d4k, &yy, &mm, &dd);
     datetime_set(dt, yy, mm, dd, clock);
+}
+
+int datetime_equals(struct datetime *a, struct datetime *b)
+{
+    return memcmp(a, b, sizeof(*a)) == 0;
 }

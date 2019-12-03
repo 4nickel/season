@@ -21,5 +21,6 @@ struct datetime
 
 void datetime_print(struct datetime *dt);
 void datetime_from_astronomical_jdn(struct datetime *dt, double jdna);
+int datetime_equals(struct datetime *a, struct datetime *b);
 
 #endif
