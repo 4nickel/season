@@ -33,7 +33,7 @@
 # The name of your main file will also be the name of
 # the output file. Libraries don't *really* have a main
 # file, but you know what I mean.
-MAIN=meeus-season
+MAIN=season
 
 # The default target. It's important to adjust this to
 # your needs. Predefined values are:
